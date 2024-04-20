@@ -13,6 +13,7 @@ export default {
       'light-gray': '#828585',
       'dark-gray': '#636565',
       'gray': '#7A7A7D',
+      'light-gray-2': '#E4E1E1',
     }
   },
   plugins: [],
