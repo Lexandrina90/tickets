@@ -15,3 +15,35 @@ export interface ITicket {
 export interface ITicketItemProps {
   ticket: ITicket;
 }
+
+export interface ITicketStore {
+    tickets: ITicket[];
+    sortTicketsByPrice: () => void;
+    applyFilters: (filters: string[]) => void;
+    usdRate: number;
+    eurRate: number;
+    fetchValues: () => Promise<void>;
+}
+
+export interface FilterStore {
+    filters: string[]; 
+    currency: string; 
+    toggleFilter: (filter: string) => void; 
+    selectOnlyOneFilter: (filter: string) => void;
+    setCurrency: (currency: string) => void;
+}
+
+interface Valute {
+    ID: string;
+    NumCode: string;
+    CharCode: string;
+    Nominal: number;
+    Name: string;
+    Value: number;
+    Previous: number;
+}
+
+export interface ICurrencyValues{
+    USD: Valute;
+    EUR: Valute;
+}
